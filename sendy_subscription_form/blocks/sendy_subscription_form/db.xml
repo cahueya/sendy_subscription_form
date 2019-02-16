@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  xmlns="http://www.concrete5.org/doctrine-xml/0.5"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.concrete5.org/doctrine-xml/0.5 http://concrete5.github.io/doctrine-xml/doctrine-xml-0.5.xsd"
+>
+
+  <table name="btSendySubscriptionForm">
+    <field name="bID" type="integer" comment="Block ID">
+      <unsigned/>
+      <key/>
+    </field>
+    <field name="title" type="text" comment="Title">
+    </field>
+    <field name="description" type="text" comment="Description">
+    </field>
+    <field name="listURL" type="text" comment="Destination page: external URL">
+    </field>
+    <field name="listID" type="text" comment="List ID to subscribe to">
+    </field>
+    <field name="addGDPR" type="boolean" comment="Offer GDPR compliant subscription">
+    </field>
+    <field name="privacyURL" type="text" comment="URL to your Privacy Terms">
+    </field>
+  </table>
+
+</schema>
