@@ -1,12 +1,10 @@
 <?php
 namespace Concrete\Package\SendySubscriptionForm\Block\SendySubscriptionForm;
-use File;
+
 use BlockType;
 use Page;
 use Core;
-use Log;
 use \Concrete\Core\Block\BlockController;
-use \Concrete\Core\Page\Theme\GridFramework as ThemeGridFrameworkObject;
 
 class Controller extends BlockController {
     protected $btTable = 'btSendySubscriptionForm';
@@ -38,8 +36,6 @@ class Controller extends BlockController {
         $this->set('listID', $this->listID);
         $this->set('addGDPR', $this->addGDPR);
         $this->set('privacyURL', $this->privacyURL);
-        
-
     }
     
     /**
@@ -48,17 +44,15 @@ class Controller extends BlockController {
     public function save($args)
     {  
         $args['title']       = isset($args['title']) ?       trim($args['title']) : '';
-	    $args['description'] = isset($args['description']) ? trim($args['description']) : '';
+        $args['description'] = isset($args['description']) ? trim($args['description']) : '';
         $args['listURL']     = isset($args['listURL']) ?     trim($args['listURL']) : '';
         $args['listID']      = isset($args['listID']) ?      trim($args['listID']) : '';
         $args['addGDPR']     = isset($args['addGDPR']) ?     trim($args['addGDPR']) : '0'; 
-        $args['privacyURL']     = isset($args['privacyURL']) ?     trim($args['privacyURL']) : ''; 
-        
+        $args['privacyURL']  = isset($args['privacyURL']) ?     trim($args['privacyURL']) : ''; 
         parent::save($args);
-             
     }
     	
-		public function validate($args) {
+    public function validate($args) {
         $e = Core::make("helper/validation/error");                    
             if (empty($args['listURL'])){
                 $e->add(t('List URL must be set'));
@@ -67,7 +61,5 @@ class Controller extends BlockController {
                 $e->add(t('List ID must be set'));
             }        
         return $e;
-        
-        
     }
 } 
