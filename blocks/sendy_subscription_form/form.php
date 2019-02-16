@@ -42,12 +42,6 @@ $page = Page::getCurrentPage();
             </label>
             </br><small id="gdpr" class="form-text text-muted"><?= t('If you want to comply to GDPR, you must provide an appropriate Privacy Policy.'); ?></small>
         </div>
-    </fieldset>  
-        
-
-        
-        
- 
-        
+    </fieldset>     
 </div>
 
