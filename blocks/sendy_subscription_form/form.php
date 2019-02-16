@@ -1,7 +1,5 @@
 <?php defined('C5_EXECUTE') or die("Access Denied.");
-$al = Core::make('helper/concrete/asset_library');
 $page = Page::getCurrentPage();
-
 ?>
 
 <div>
